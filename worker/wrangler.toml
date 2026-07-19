@@ -12,7 +12,8 @@ binding = "EXPORT_FILES"
 bucket_name = "emergency-rescue-export"
 
 [vars]
-# 修改为实际部署抢救记录单网页的 HTTPS 域名；多个域名用英文逗号分隔。
+# 改成 GitHub Pages 的“来源”，只填协议和域名，不带仓库路径。
+# 例：https://xiaobangcc006-star.github.io；多个来源用英文逗号分隔。
 ALLOWED_ORIGINS = "https://YOUR_GITHUB_USERNAME.github.io"
 EXPORT_TTL_MINUTES = "30"
 MAX_EXPORT_PAGES = "24"
