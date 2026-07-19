@@ -4,9 +4,9 @@
 
 ## 交付结构
 
-- `web/emergency-rescue.html`：原抢救记录单填写页，已支持微信导出服务。
-- `web/export-config.js`：填写 Worker 的 HTTPS 地址。
-- `web/微信入口.html`：可作为微信分享入口，自动打开抢救记录单。
+- `docs/emergency-rescue.html`：原抢救记录单填写页，已支持微信导出服务。
+- `docs/export-config.js`：填写 Worker 的 HTTPS 地址。
+- `docs/微信入口.html`：可作为微信分享入口，自动打开抢救记录单。
 - `worker/`：Cloudflare Worker、R2 配置和 PDF 生成服务。
 
 ## 部署步骤
@@ -38,9 +38,9 @@
    https://emergency-rescue-wechat-export.example.workers.dev
    ```
 
-4. 编辑 `web/export-config.js`，将 `apiBaseUrl` 改为上一步的 Worker HTTPS 地址。
+4. 编辑 `docs/export-config.js`，将 `apiBaseUrl` 改为上一步的 Worker HTTPS 地址。
 
-5. 将 `web/` 目录部署至 GitHub Pages、Cloudflare Pages 或任意 HTTPS 静态网站。微信分享链接应指向：
+5. 将 `docs/` 目录部署至 GitHub Pages、Cloudflare Pages 或任意 HTTPS 静态网站。微信分享链接应指向：
 
    ```text
    https://你的域名/微信入口.html
