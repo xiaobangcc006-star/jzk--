@@ -1,0 +1,19 @@
+name = "emergency-rescue-wechat-export"
+main = "src/index.js"
+compatibility_date = "2026-07-19"
+compatibility_flags = ["nodejs_compat"]
+workers_dev = true
+
+[triggers]
+crons = ["*/5 * * * *"]
+
+[[r2_buckets]]
+binding = "EXPORT_FILES"
+bucket_name = "emergency-rescue-export"
+
+[vars]
+# 修改为实际部署抢救记录单网页的 HTTPS 域名；多个域名用英文逗号分隔。
+ALLOWED_ORIGINS = "https://YOUR_GITHUB_USERNAME.github.io"
+EXPORT_TTL_MINUTES = "30"
+MAX_EXPORT_PAGES = "24"
+MAX_EXPORT_BYTES = "30000000"
